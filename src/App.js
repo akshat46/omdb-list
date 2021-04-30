@@ -50,6 +50,7 @@ function App() {
         let newMyList = Array.from(myList);
         if (source.droppableId === COLUMNS.DATABASE && destination.droppableId === COLUMNS.MYLIST) {
             // dragging from database list to my list
+            // if (myList.filter((movie) => movie.imdbID === data[source.index]).length > 0) return;
             newData.splice(source.index, 1);
             newMyList.splice(destination.index, 0, data[source.index]);
             setData(newData);
