@@ -8,21 +8,24 @@ function Movie({ movie, index }) {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
-                    class="shadow-lg rounded-2xl border-2 border-gray-100 w-full bg-white relative overflow-hidden mb-8">
+                    className="shadow-lg rounded-2xl border-2 border-gray-100 w-full bg-white relative overflow-hidden mb-8">
                     <img
                         alt="poster"
                         src={movie.Poster}
-                        class="absolute -right-10 top-0 -bottom-8 h-full w-1/3 mb-4 object-cover"
+                        className="absolute -right-10 top-0 -bottom-8 h-full w-1/3 mb-4 object-cover"
                     />
-                    <div class="w-3/4 p-4">
-                        <p class="text-gray-600 text-2xl font-black">
-                            {movie.Title} <span class="text-gray-400 text-xs font-medium mb-2">({movie.Year})</span>
+                    <div className="w-3/4 p-4">
+                        <p className="text-gray-600 text-2xl font-black">
+                            {movie.Title}{" "}
+                            <span className="text-gray-400 text-xs font-medium mb-2">
+                                ({movie.Year})
+                            </span>
                         </p>
-                        <p class="text-gray-400 text-xs font-medium mb-2">{movie.Runtime}</p>
-                        <p class="text-gray-400 text-xs mb-2">
-                            Directed by <span class="font-bold">{movie.Director}</span>
+                        <p className="text-gray-400 text-xs font-medium mb-2">{movie.Runtime}</p>
+                        <p className="text-gray-400 text-xs mb-2">
+                            Directed by <span className="font-bold">{movie.Director}</span>
                         </p>
-                        <p class="text-gray-400 text-xs mb-2 line-clamp-3">{movie.Plot}</p>
+                        <p className="text-gray-400 text-xs mb-2 line-clamp-3">{movie.Plot}</p>
                         {movie.Ratings[0] === undefined ? (
                             <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-200 text-gray-800">
                                 n/a

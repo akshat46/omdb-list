@@ -4,7 +4,7 @@ import "./App.css";
 import Movie from "./components/table";
 import { useState, useCallback } from "react";
 
-const API_CALL = "http://www.omdbapi.com/?apikey=95aea5b8&type=movie&";
+const API_CALL = "https://www.omdbapi.com/?apikey=95aea5b8&type=movie&";
 const COLUMNS = { MYLIST: "my-list", DATABASE: "movie-database" };
 
 function App() {
@@ -75,7 +75,7 @@ function App() {
         <DragDropContext onDragEnd={onDragEnd}>
             <div className="max-w-6xl flex items-start m-auto mt-4">
                 <div className="flex-1 border-2 rounded-md border-green-400 p-8">
-                    <p class="text-gray-800 text-4xl font-black mb-4 text-green-400">My List</p>
+                    <p className="text-gray-800 text-4xl font-black mb-4 text-green-400">My List</p>
                     <Droppable droppableId={COLUMNS.MYLIST}>
                         {(provided) => (
                             <div {...provided.droppableProps} ref={provided.innerRef}>
@@ -88,7 +88,7 @@ function App() {
                     </Droppable>
                 </div>
                 <div className="p-8 flex-1">
-                    <p class="text-gray-800 text-4xl font-black mb-4 text-indigo-600">
+                    <p className="text-gray-800 text-4xl font-black mb-4 text-indigo-600">
                         Movie Database
                     </p>
                     <input
@@ -100,7 +100,7 @@ function App() {
                         }}
                     />
                     {isLoading ? (
-                        <p class="text-indigo-400 text-md font-medium mb-2">Loading...</p>
+                        <p className="text-indigo-400 text-md font-medium mb-2">Loading...</p>
                     ) : (
                         <Droppable droppableId={COLUMNS.DATABASE}>
                             {(provided) => (
